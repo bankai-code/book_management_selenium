@@ -1,35 +1,62 @@
 # book_management_selenium
-Learning Web Development and UI testing using Selenium
-Book Management Web Application Requirements for Selenium Testing
-Introduction
-This document outlines the functional requirements for a web-based book management system. The application provides user authentication and book management functionalities, including adding, viewing, and deleting books.
-General Requirements and Scope of Work
-System Structure:
-1. XAMPPforMacOsisusedforhostingonlocalhost
-2. MySQL/MariaDBdatabaseusingXamppwith‘book’databasefromweekly
-activity is used.
-3. BootstrapisusedfordesignalongwithCSSandJSforscripting.
-4. SeleniumIDEisusedforrecordingtestcasesandrunningthem.Ihavealso
-exported the tests from the IDE to a python script and run them from the terminal.
-The system enables users to:
-1. Loginandlogoutoftheapplication.
-2. Viewalistofallbooksinthedatabase. 3. Addnewbookstothedatabase.
-4. Deletebooksfromthedatabase.
-Functional Requirements
-User Authentication:
-1. Login:Usersshouldbeabletologinusingausernameandpassword.The system validates the credentials against the database. If the credentials are incorrect, an error message is displayed.
-2. Logout:Usersshouldbeabletologoutfromthesystem.Uponloggingout,the user session is terminated, and the user is redirected to the login page.
-Book Management
-1. DisplayBooks:Afterloggingin,theuseristakentothebooklistpage,which displays all the current books in the database.
-Name: Rohan Jayachandran NETID: RXJ220025 CS6314 – Web Programming Languages – S24
-Week 14 - LAB-01 - Selenium Testing
-DUE: 04/26/2024
-2. AddBook:Authorizedusersshouldbeabletoaddnewbookstothedatabase using the given form. All fields must include title, ISBN-10, ISBN-13, copyright year, subcategory ID, imprint ID, production status ID, binding type ID, trim size, page counts editorial estimate, description, and cover image. On successful adding a book, a message is displayed to the user.
-3. DeleteBook:Userscandeleteabookfromthedatabase.Ifthebookdoesnot exist, an error message is displayed, and on successful deletion, a success message is also displayed
-Development and Testing Tools
-Development Tools: XAMPP, PHP, MySQL/MariaDB, HTML, Bootstrap, CSS, JavaScript.
-Testing Tools: Selenium IDE for recording and running test scenarios & python pytest for running the test suite via the Terminal.
-Testing Plans:
-Use Selenium IDE to record test cases and also export the test suite to use with python pytest package. The tests are meant to test the following features and are described in detail in the Test Planning Document.
-1. LoginProcess.
-2. BookManagement(add,delete). 3. LogoutProcess.
+# Book Management Web Application
+
+## Introduction
+This web-based book management system provides user authentication and book management functionalities, including adding, viewing, and deleting books.
+
+## System Structure
+- Hosting: XAMPP for macOS (localhost)
+- Database: MySQL/MariaDB (using 'book' database)
+- Frontend: Bootstrap, CSS, and JavaScript
+- Testing: Selenium IDE for recording test cases, Python script for running tests via terminal
+
+## Features
+Users can:
+1. Log in and log out of the application
+2. View a list of all books in the database
+3. Add new books to the database
+4. Delete books from the database
+
+## Functional Requirements
+
+### User Authentication
+1. **Login**: Users can log in using a username and password. Credentials are validated against the database. Incorrect credentials display an error message.
+2. **Logout**: Users can log out, terminating the session and redirecting to the login page.
+
+### Book Management
+1. **Display Books**: After login, users see a list of all books in the database.
+2. **Add Book**: Authorized users can add new books using a form. Required fields:
+   - Title
+   - ISBN-10
+   - ISBN-13
+   - Copyright year
+   - Subcategory ID
+   - Imprint ID
+   - Production status ID
+   - Binding type ID
+   - Trim size
+   - Page counts editorial estimate
+   - Description
+   - Cover image
+3. **Delete Book**: Users can delete books from the database. Success or error messages are displayed accordingly.
+
+## Development Tools
+- XAMPP
+- PHP
+- MySQL/MariaDB
+- HTML
+- Bootstrap
+- CSS
+- JavaScript
+
+## Testing Tools
+- Selenium IDE: For recording and running test scenarios
+- Python pytest: For running the test suite via Terminal
+
+## Testing Plans
+Selenium IDE is used to record test cases and export the test suite for use with Python pytest. Tests cover:
+1. Login Process
+2. Book Management (add, delete)
+3. Logout Process
+
+For detailed testing information, please refer to the Test Planning Document.
